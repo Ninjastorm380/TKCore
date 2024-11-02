@@ -12,6 +12,15 @@ public partial class GLBuffer : IGLObject {
         }
     }
     
+    public void Add(GLBufferAttribute Attribute) {
+        lock (Constants.GL.Lock) {
+            GL.BindBuffer(BufferTarget, Pointer);
+            GL.VertexAttribPointer(Attribute.AttributeIndex, Attribute.ElementSize, Attribute.PointerType, false, Attribute.ElementStride, Attribute.ElementOffset);
+            GL.VertexAttribDivisor(Attribute.AttributeIndex, Attribute.UnitDivisor);
+            GL.EnableVertexAttribArray(Attribute.AttributeIndex);
+        }
+    }
+    
     public void Upload(Matrix4[] Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
