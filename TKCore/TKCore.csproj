@@ -29,9 +29,6 @@
     <ItemGroup>
       <Folder Include="Source\TKCore\Graphics\GLProgram\" />
       <Folder Include="Source\TKCore\Graphics\GLShader\" />
-      <Folder Include="Source\TKCore\Graphics\GLTextureFilter\" />
-      <Folder Include="Source\TKCore\Graphics\GLTextureInfo\" />
-      <Folder Include="Source\TKCore\Graphics\GLTexture\" />
       <Folder Include="Source\TKCore\Windowing\" />
     </ItemGroup>
 
