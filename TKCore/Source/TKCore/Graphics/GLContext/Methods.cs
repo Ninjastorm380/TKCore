@@ -23,18 +23,16 @@ public partial class GLContext : IGLObject {
         lock (Constants.GL.Lock) {
             GL.BindVertexArray(Pointer);
             Object.Bind();
+            Objects.Add(Object);
         }
-        
-        Objects.Add(Object);
     }
     
     public void Remove(IGLObject Object) {
         lock (Constants.GL.Lock) {
             GL.BindVertexArray(Pointer);
             Object.Unbind();
+            Objects.Remove(Object);
         }
-        
-        Objects.Remove(Object);
     }
     
     void IDisposable.Dispose() {
@@ -47,6 +45,7 @@ public partial class GLContext : IGLObject {
         
             GL.DeleteVertexArray(Pointer);
             GL.BindVertexArray(0);
-        } Disposed = true;
+            Disposed = true;
+        }
     }
 }

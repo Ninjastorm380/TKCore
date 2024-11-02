@@ -28,7 +28,6 @@
 
     <ItemGroup>
       <Folder Include="Source\TKCore\Graphics\GLBufferAttribute\" />
-      <Folder Include="Source\TKCore\Graphics\GLBuffer\" />
       <Folder Include="Source\TKCore\Graphics\GLProgram\" />
       <Folder Include="Source\TKCore\Graphics\GLShader\" />
       <Folder Include="Source\TKCore\Graphics\GLTextureFilter\" />
