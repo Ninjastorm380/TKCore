@@ -24,168 +24,168 @@ public partial class GLBuffer : IGLObject {
     public void Upload(Matrix4[] Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, Data.Length * 4 * (4 * 4), Data, Usage);
+            GL.BufferData(BufferTarget, Data.Length * Constants.ByteSize.Matrix4, Data, Usage);
         }
     }
     
     public void Upload(Matrix3[] Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, Data.Length * 4 * (3 * 3), Data, Usage);
+            GL.BufferData(BufferTarget, Data.Length * Constants.ByteSize.Matrix3, Data, Usage);
         }
     }
     
     public void Upload(Matrix2[] Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, Data.Length * 4 * (2 * 2), Data, Usage);
+            GL.BufferData(BufferTarget, Data.Length * Constants.ByteSize.Matrix2, Data, Usage);
         }
     }
     
     public void Upload(Vector4[] Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, Data.Length * 4 * (4 * 1), Data, Usage);
+            GL.BufferData(BufferTarget, Data.Length * Constants.ByteSize.Vector4, Data, Usage);
         }
     }
     
     public void Upload(Vector3[] Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, Data.Length * 4 * (3 * 1), Data, Usage);
+            GL.BufferData(BufferTarget, Data.Length * Constants.ByteSize.Vector3, Data, Usage);
         }
     }
     
     public void Upload(Vector2[] Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, Data.Length * 4 * (2 * 1), Data, Usage);
+            GL.BufferData(BufferTarget, Data.Length * Constants.ByteSize.Vector2, Data, Usage);
         }
     }
     
     public void Upload(Single[] Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, Data.Length * 4 * (1 * 1), Data, Usage);
+            GL.BufferData(BufferTarget, Data.Length * Constants.ByteSize.Single, Data, Usage);
         }
     }
     
     public void Upload(Vector4i[] Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, Data.Length * 4 * (4 * 1), Data, Usage);
+            GL.BufferData(BufferTarget, Data.Length * Constants.ByteSize.Vector4i, Data, Usage);
         }
     }
     
     public void Upload(Vector3i[] Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, Data.Length * 4 * (3 * 1), Data, Usage);
+            GL.BufferData(BufferTarget, Data.Length * Constants.ByteSize.Vector3i, Data, Usage);
         }
     }
     
     public void Upload(Vector2i[] Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, Data.Length * 4 * (2 * 1), Data, Usage);
+            GL.BufferData(BufferTarget, Data.Length * Constants.ByteSize.Vector2i, Data, Usage);
         }
     }
     
     public void Upload(Int32[] Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, Data.Length * 4 * (1 * 1), Data, Usage);
+            GL.BufferData(BufferTarget, Data.Length * Constants.ByteSize.Int32, Data, Usage);
         }
     }
     
     public void Upload(UInt32[] Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, Data.Length * 4 * (1 * 1), Data, Usage);
+            GL.BufferData(BufferTarget, Data.Length * Constants.ByteSize.UInt32, Data, Usage);
         }
     }
     
     public void Upload(Matrix4 Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, 1 * 4 * (4 * 4), ref Data, Usage);
+            GL.BufferData(BufferTarget, Constants.ByteSize.Matrix4, ref Data, Usage);
         }
     }
     
     public void Upload(Matrix3 Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, 1 * 4 * (3 * 3), ref Data, Usage);
+            GL.BufferData(BufferTarget, Constants.ByteSize.Matrix3, ref Data, Usage);
         }
     }
     
     public void Upload(Matrix2 Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, 1 * 4 * (2 * 2), ref Data, Usage);
+            GL.BufferData(BufferTarget, Constants.ByteSize.Matrix2, ref Data, Usage);
         }
     }
     
     public void Upload(Vector4 Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, 1 * 4 * (4 * 1), ref Data, Usage);
+            GL.BufferData(BufferTarget, Constants.ByteSize.Vector4, ref Data, Usage);
         }
     }
     
     public void Upload(Vector3 Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, 1 * 4 * (3 * 1), ref Data, Usage);
+            GL.BufferData(BufferTarget, Constants.ByteSize.Vector3, ref Data, Usage);
         }
     }
     
     public void Upload(Vector2 Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, 1 * 4 * (2 * 1), ref Data, Usage);
+            GL.BufferData(BufferTarget, Constants.ByteSize.Vector2, ref Data, Usage);
         }
     }
     
     public void Upload(Single Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, 1 * 4 * (1 * 1), ref Data, Usage);
+            GL.BufferData(BufferTarget, Constants.ByteSize.Single, ref Data, Usage);
         }
     }
     
     public void Upload(Vector4i Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, 1 * 4 * (4 * 1), ref Data, Usage);
+            GL.BufferData(BufferTarget, Constants.ByteSize.Vector4i, ref Data, Usage);
         }
     }
     
     public void Upload(Vector3i Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, 1 * 4 * (3 * 1), ref Data, Usage);
+            GL.BufferData(BufferTarget, Constants.ByteSize.Vector3i, ref Data, Usage);
         }
     }
     
     public void Upload(Vector2i Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, 1 * 4 * (2 * 1), ref Data, Usage);
+            GL.BufferData(BufferTarget, Constants.ByteSize.Vector2i, ref Data, Usage);
         }
     }
     
     public void Upload(Int32 Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, 1 * 4 * (1 * 1), ref Data, Usage);
+            GL.BufferData(BufferTarget, Constants.ByteSize.Int32, ref Data, Usage);
         }
     }
     
     public void Upload(UInt32 Data, BufferUsageHint Usage) {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
-            GL.BufferData(BufferTarget, 1 * 4 * (1 * 1), ref Data, Usage);
+            GL.BufferData(BufferTarget, Constants.ByteSize.UInt32, ref Data, Usage);
         }
     }
     
