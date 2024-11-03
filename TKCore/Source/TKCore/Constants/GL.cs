@@ -1,5 +1,5 @@
 namespace TKCore.Constants;
 
-public class GL {
+internal class GL {
     internal readonly static Object Lock = new Object();
 }

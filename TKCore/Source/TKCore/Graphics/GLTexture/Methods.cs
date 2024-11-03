@@ -4,7 +4,7 @@ using OpenTK.Mathematics;
 namespace TKCore.Graphics;
 
 public partial class GLTexture : IGLObject {
-    public GLTexture(TextureUnit Unit, Byte[] Data, Vector2i Size, GLTextureInfo Info) {
+    public GLTexture(Byte[] Data, TextureUnit Unit, Vector2i Size, GLTextureInfo Info) {
         lock (Constants.GL.Lock) {
             this.Info   = Info;
             this.Unit   = Unit;
@@ -17,7 +17,7 @@ public partial class GLTexture : IGLObject {
         }
     }
     
-    public GLTexture(TextureUnit Unit, Byte[] Data, Vector2i Size, GLTextureInfo Info, GLTextureFilter Filter) {
+    public GLTexture(Byte[] Data, TextureUnit Unit, Vector2i Size, GLTextureInfo Info, GLTextureFilter Filter) {
         lock (Constants.GL.Lock) {
             this.Info   = Info;
             this.Filter = Filter;

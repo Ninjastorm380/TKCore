@@ -26,10 +26,4 @@
       <PackageReference Include="OpenTK" Version="4.8.2" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Source\TKCore\Graphics\GLProgram\" />
-      <Folder Include="Source\TKCore\Graphics\GLShader\" />
-      <Folder Include="Source\TKCore\Windowing\" />
-    </ItemGroup>
-
 </Project>
