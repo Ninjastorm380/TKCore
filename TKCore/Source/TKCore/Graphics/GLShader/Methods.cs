@@ -9,12 +9,13 @@ public partial class GLShader : IDisposable {
                 throw new ArgumentException("'Data' must not be null!");
             }
             
-            String Source = System.Text.Encoding.ASCII.GetString(Data);
+            ShaderSource = System.Text.Encoding.ASCII.GetString(Data);
             Type    = ShaderType;
             Pointer = GL.CreateShader(Type);
-            GL.ShaderSource(Pointer, Source);
+            GL.ShaderSource(Pointer, ShaderSource);
             GL.CompileShader(Pointer);
-            GL.GetShaderi(Pointer, ShaderParameterName.CompileStatus, out Int32 Result);
+            Int32 Result = 0;
+            GL.GetShaderi(Pointer, ShaderParameterName.CompileStatus, ref Result);
             CompileError = (Result == 0);
             GL.GetShaderInfoLog(Pointer, out String Log);
             CompileLog = Log;
