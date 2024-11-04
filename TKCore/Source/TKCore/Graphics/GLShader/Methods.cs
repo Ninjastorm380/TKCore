@@ -21,7 +21,7 @@ public partial class GLShader : IDisposable {
         }
     }
 
-    void IDisposable.Dispose() {
+    public void Dispose() {
         lock (Constants.GL.Lock) {
             GL.DeleteShader(Pointer);
         }

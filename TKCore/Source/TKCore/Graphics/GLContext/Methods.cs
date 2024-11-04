@@ -11,11 +11,11 @@ public partial class GLContext : IGLObject {
         }
     }
     
-    void IGLObject.Bind() {
+    public void Bind() {
         lock (Constants.GL.Lock) GL.BindVertexArray(Pointer);
     }
     
-    void IGLObject.Unbind() {
+    public void Unbind() {
         lock (Constants.GL.Lock) GL.BindVertexArray(0);
     }
 
@@ -35,7 +35,7 @@ public partial class GLContext : IGLObject {
         }
     }
     
-    void IDisposable.Dispose() {
+    public void Dispose() {
         lock (Constants.GL.Lock) {
             GL.BindVertexArray(Pointer);
         

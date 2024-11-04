@@ -27,4 +27,24 @@
       <ProjectReference Include="..\TKCore\TKCore.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="StbImageSharp" Version="2.30.15" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Assets\Models\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Assets\Textures\DebugTexture.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Assets\Shaders\NewShader\Vertex.glsl">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Assets\Shaders\NewShader\Fragment.glsl">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
