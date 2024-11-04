@@ -15,7 +15,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("TKCore.Tests"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+036679b87f771678942867cccbda29fe15f33310"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2962b3f50a1a3c8025411a7fcb5696dd3ed43b94"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("TKCore.Tests"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("TKCore.Tests"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")> 

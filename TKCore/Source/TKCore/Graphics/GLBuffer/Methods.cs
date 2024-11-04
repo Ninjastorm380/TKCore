@@ -189,13 +189,13 @@ public partial class GLBuffer : IGLObject {
         }
     }
     
-    void IGLObject.Bind() {
+    public void Bind() {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, Pointer);
         }
     }
     
-    void IGLObject.Unbind() {
+    public void Unbind() {
         lock (Constants.GL.Lock) {
             GL.BindBuffer(BufferTarget, 0);
         }

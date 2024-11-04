@@ -12,6 +12,7 @@ Namespace TKCore.Tests
         End Sub
 
         Protected Overrides Sub OnLoad()
+            MyBase.OnLoad()
             LightManager = New LightManager()
             VoxelManager = New VoxelManager()
             
@@ -32,23 +33,22 @@ Namespace TKCore.Tests
             CreateLamps(VoxelManager, LightManager, New Vector3i(-33), New Vector3i(33), 20)
             CreateOrbiters(VoxelManager, Camera, New Vector3i(-70), New Vector3i(70), 50000)
             GL.ClearColor(New Color4(0,0,0,0))
-            MyBase.OnLoad()
         End Sub
 
         Protected Overrides Sub OnUpdateFrame(Args As FrameEventArgs)
+            MyBase.OnUpdateFrame(args)
             HandleInput(Args)
             VoxelManager.Tick(Args)
             LightManager.Tick()
             VoxelManager.ApplyLights(LightManager)
             VoxelManager.ApplyCamera(Camera)
-            
-            MyBase.OnUpdateFrame(args)
         End Sub
 
         Protected Overrides Sub OnRenderFrame(Args As FrameEventArgs)
+            MyBase.OnRenderFrame(args)
+            GL.Clear(ClearBufferMask.ColorBufferBit Or ClearBufferMask.DepthBufferBit)
             VoxelManager.Draw()
             SwapBuffers()
-            MyBase.OnRenderFrame(args)
         End Sub
 
         Protected Overrides Sub OnUnload()
@@ -60,9 +60,11 @@ Namespace TKCore.Tests
         End Sub
 
         Protected Overrides Sub OnResize(e As ResizeEventArgs)
+            MyBase.OnResize(e)
+            GL.Viewport(0, 0, ClientSize.X, ClientSize.Y)
+            Aspect = CSng(ClientSize.X / ClientSize.Y)
             Camera.AspectRatio = Aspect
             Camera.ApplyProjection()
-            MyBase.OnResize(e)
         End Sub
 
         Private Sub HandleInput(Args As FrameEventArgs)

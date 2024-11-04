@@ -220,7 +220,7 @@ Public Class VoxelManager : Implements IDisposable
     End Sub
     
     public Sub DrawInstances(PrimitiveType As PrimitiveType, ElementType As DrawElementsType, IndexCount As Int32, InstanceCount As Int32)
-        GL.DrawElementsInstanced(PrimitiveType, IndexCount, ElementType, 0, InstanceCount)
+        GL.DrawElementsInstanced(PrimitiveType, IndexCount, ElementType, IntPtr.Zero, InstanceCount)
     End Sub
 
     Public Sub Bind()

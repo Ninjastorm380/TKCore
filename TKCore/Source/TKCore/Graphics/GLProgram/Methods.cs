@@ -67,13 +67,13 @@ public partial class GLProgram : IGLObject {
         }
     }
 
-    void IGLObject.Bind() {
+    public void Bind() {
         lock (Constants.GL.Lock) {
             GL.UseProgram(Pointer);
         }
     }
 
-    void IGLObject.Unbind() {
+    public void Unbind() {
         lock (Constants.GL.Lock) {
             GL.UseProgram(0);
         }
