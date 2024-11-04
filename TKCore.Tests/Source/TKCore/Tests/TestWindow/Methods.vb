@@ -46,6 +46,8 @@ Namespace TKCore.Tests
         End Sub
 
         Protected Overrides Sub OnRenderFrame(Args As FrameEventArgs)
+            GL.Clear(ClearBufferMask.ColorBufferBit Or ClearBufferMask.DepthBufferBit)
+
             VoxelManager.Draw()
             SwapBuffers()
             MyBase.OnRenderFrame(args)
