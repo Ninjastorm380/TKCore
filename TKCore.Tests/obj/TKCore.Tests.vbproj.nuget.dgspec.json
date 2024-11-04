@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore.Tests/TKCore.Tests.vbproj": {}
+    "/home/prydaran/Documents/Rider/TKCore/0003/TKCore-TK5/TKCore.Tests/TKCore.Tests.vbproj": {}
   },
   "projects": {
-    "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore.Extra/TKCore.Extra.csproj": {
+    "/home/prydaran/Documents/Rider/TKCore/0003/TKCore-TK5/TKCore.Extra/TKCore.Extra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore.Extra/TKCore.Extra.csproj",
+        "projectUniqueName": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore-TK5/TKCore.Extra/TKCore.Extra.csproj",
         "projectName": "TKCore.Extra",
-        "projectPath": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore.Extra/TKCore.Extra.csproj",
+        "projectPath": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore-TK5/TKCore.Extra/TKCore.Extra.csproj",
         "packagesPath": "/home/prydaran/.nuget/packages/",
-        "outputPath": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore.Extra/obj/",
+        "outputPath": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore-TK5/TKCore.Extra/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/prydaran/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore/TKCore.csproj": {
-                "projectPath": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore/TKCore.csproj"
+              "/home/prydaran/Documents/Rider/TKCore/0003/TKCore-TK5/TKCore/TKCore.csproj": {
+                "projectPath": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore-TK5/TKCore/TKCore.csproj"
               }
             }
           }
@@ -50,7 +50,7 @@
           "dependencies": {
             "OpenTK": {
               "target": "Package",
-              "version": "[5.0.0-pre.12, )"
+              "version": "[5.0.0-pre.10, )"
             }
           },
           "imports": [
@@ -73,14 +73,14 @@
         }
       }
     },
-    "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore.Tests/TKCore.Tests.vbproj": {
+    "/home/prydaran/Documents/Rider/TKCore/0003/TKCore-TK5/TKCore.Tests/TKCore.Tests.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore.Tests/TKCore.Tests.vbproj",
+        "projectUniqueName": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore-TK5/TKCore.Tests/TKCore.Tests.vbproj",
         "projectName": "TKCore.Tests",
-        "projectPath": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore.Tests/TKCore.Tests.vbproj",
+        "projectPath": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore-TK5/TKCore.Tests/TKCore.Tests.vbproj",
         "packagesPath": "/home/prydaran/.nuget/packages/",
-        "outputPath": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore.Tests/obj/",
+        "outputPath": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore-TK5/TKCore.Tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/prydaran/.nuget/NuGet/NuGet.Config"
@@ -95,11 +95,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore.Extra/TKCore.Extra.csproj": {
-                "projectPath": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore.Extra/TKCore.Extra.csproj"
+              "/home/prydaran/Documents/Rider/TKCore/0003/TKCore-TK5/TKCore.Extra/TKCore.Extra.csproj": {
+                "projectPath": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore-TK5/TKCore.Extra/TKCore.Extra.csproj"
               },
-              "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore/TKCore.csproj": {
-                "projectPath": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore/TKCore.csproj"
+              "/home/prydaran/Documents/Rider/TKCore/0003/TKCore-TK5/TKCore/TKCore.csproj": {
+                "projectPath": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore-TK5/TKCore/TKCore.csproj"
               }
             }
           }
@@ -120,6 +120,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "OpenTK": {
+              "target": "Package",
+              "version": "[5.0.0-pre.10, )"
+            },
             "StbImageSharp": {
               "target": "Package",
               "version": "[2.30.15, )"
@@ -145,14 +149,14 @@
         }
       }
     },
-    "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore/TKCore.csproj": {
+    "/home/prydaran/Documents/Rider/TKCore/0003/TKCore-TK5/TKCore/TKCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore/TKCore.csproj",
+        "projectUniqueName": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore-TK5/TKCore/TKCore.csproj",
         "projectName": "TKCore",
-        "projectPath": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore/TKCore.csproj",
+        "projectPath": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore-TK5/TKCore/TKCore.csproj",
         "packagesPath": "/home/prydaran/.nuget/packages/",
-        "outputPath": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore/obj/",
+        "outputPath": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore-TK5/TKCore/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/prydaran/.nuget/NuGet/NuGet.Config"
@@ -187,7 +191,7 @@
           "dependencies": {
             "OpenTK": {
               "target": "Package",
-              "version": "[5.0.0-pre.12, )"
+              "version": "[5.0.0-pre.10, )"
             }
           },
           "imports": [

@@ -23,11 +23,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Source\TKCore\Extra\" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <PackageReference Include="OpenTK" Version="5.0.0-pre.12" />
+      <PackageReference Include="OpenTK" Version="5.0.0-pre.10" />
     </ItemGroup>
 
     <ItemGroup>

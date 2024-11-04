@@ -36,14 +36,14 @@ public partial class GLTexture : IGLObject {
         }
     }
     
-    void IGLObject.Bind() {
+    public void Bind() {
         lock (Constants.GL.Lock) {
             GL.ActiveTexture(Unit);
             GL.BindTexture(Info.TextureTarget, Pointer);
         }
     }
     
-    void IGLObject.Unbind() {
+    public void Unbind() {
         lock (Constants.GL.Lock) {
             GL.ActiveTexture(Unit);
             GL.BindTexture(Info.TextureTarget, 0);
