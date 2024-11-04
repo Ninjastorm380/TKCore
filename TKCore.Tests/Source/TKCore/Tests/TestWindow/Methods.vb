@@ -31,7 +31,7 @@ Namespace TKCore.Tests
         
             CreateLamps(VoxelManager, LightManager, New Vector3i(-33), New Vector3i(33), 20)
             CreateOrbiters(VoxelManager, Camera, New Vector3i(-70), New Vector3i(70), 50000)
-            GL.ClearColor(New Color4(0,0,0,0))
+            GL.ClearColor(0,0,0,0)
             MyBase.OnLoad()
         End Sub
 

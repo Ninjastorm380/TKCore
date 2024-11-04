@@ -14,7 +14,7 @@ public partial class GLShader : IDisposable {
             Pointer = GL.CreateShader(Type);
             GL.ShaderSource(Pointer, Source);
             GL.CompileShader(Pointer);
-            GL.GetShader(Pointer, ShaderParameter.CompileStatus, out Int32 Result);
+            GL.GetShaderi(Pointer, ShaderParameterName.CompileStatus, out Int32 Result);
             CompileError = (Result == 0);
             GL.GetShaderInfoLog(Pointer, out String Log);
             CompileLog = Log;

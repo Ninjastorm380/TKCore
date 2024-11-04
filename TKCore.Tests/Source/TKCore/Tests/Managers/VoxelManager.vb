@@ -75,10 +75,10 @@ Public Class VoxelManager : Implements IDisposable
         Context.Attach(MeshIndices)
         
         VoxelMesh = New Mesh()
-        MeshIndices.Upload(VoxelMesh.Indices, BufferUsageHint.StaticDraw)
-        MeshVertices.Upload(VoxelMesh.Vertices, BufferUsageHint.StaticDraw)
-        MeshNormals.Upload(VoxelMesh.Normals, BufferUsageHint.StaticDraw)
-        MeshTextureCoordinates.Upload(VoxelMesh.TextureCoordinates, BufferUsageHint.StaticDraw)
+        MeshIndices.Upload(VoxelMesh.Indices, BufferUsage.StaticDraw)
+        MeshVertices.Upload(VoxelMesh.Vertices, BufferUsage.StaticDraw)
+        MeshNormals.Upload(VoxelMesh.Normals, BufferUsage.StaticDraw)
+        MeshTextureCoordinates.Upload(VoxelMesh.TextureCoordinates, BufferUsage.StaticDraw)
         
         InstanceMatrices = New GLBuffer(BufferTarget.ArrayBuffer)
         Dim InstanceMatricesAttributeA As New GLBufferAttribute(3, 4, TKCore.Constants.ByteSize.Matrix4, 00 * TKCore.Constants.ByteSize.Single, 1)
@@ -193,10 +193,10 @@ Public Class VoxelManager : Implements IDisposable
             ShininessValues(Index) = Voxels(Index).Shininess
             AlwaysLitValues(Index) = Voxels(Index).AlwaysLit
         Next
-        InstanceMatrices.Upload(Matrices, BufferUsageHint.StreamDraw)
-        InstanceAtlasCoordinates.Upload(Coordinates, BufferUsageHint.StreamDraw)
-        InstanceShininess.Upload(ShininessValues, BufferUsageHint.StreamDraw)
-        InstanceAlwaysLit.Upload(AlwaysLitValues, BufferUsageHint.StreamDraw)
+        InstanceMatrices.Upload(Matrices, BufferUsage.StreamDraw)
+        InstanceAtlasCoordinates.Upload(Coordinates, BufferUsage.StreamDraw)
+        InstanceShininess.Upload(ShininessValues, BufferUsage.StreamDraw)
+        InstanceAlwaysLit.Upload(AlwaysLitValues, BufferUsage.StreamDraw)
     End Sub
     
     Public Sub ApplyLights(LightManager As LightManager)
@@ -219,8 +219,8 @@ Public Class VoxelManager : Implements IDisposable
        DrawInstances(PrimitiveType.Triangles, DrawElementsType.UnsignedInt, VoxelMesh.Indices.Length, Voxels.Count)
     End Sub
     
-    public Sub DrawInstances(PrimitiveType As PrimitiveType, ElementType As DrawElementsType, IndexCount As Int32, InstanceCount As Int32)
-        GL.DrawElementsInstanced(PrimitiveType, IndexCount, ElementType, 0, InstanceCount)
+    Public Sub DrawInstances(PrimitiveType As PrimitiveType, ElementType As DrawElementsType, IndexCount As Int32, InstanceCount As Int32)
+        GL.DrawElementsInstanced(PrimitiveType, IndexCount, ElementType, IntPtr.Zero, InstanceCount)
     End Sub
 
     Public Sub Bind()

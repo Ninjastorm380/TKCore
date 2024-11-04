@@ -43,7 +43,7 @@ public partial class GLContext : IGLObject {
                 Object.Unbind(); if (!Object.Disposed) Object.Dispose();
             }
         
-            GL.DeleteVertexArray(Pointer);
+            GL.DeleteVertexArray(in Pointer);
             GL.BindVertexArray(0);
             Disposed = true;
         }

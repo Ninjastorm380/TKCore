@@ -48,14 +48,14 @@ public partial class GLProgram : IGLObject {
             }
 
             GL.LinkProgram(Pointer);
-            GL.GetProgram(Pointer, GetProgramParameterName.LinkStatus, out Int32 Result);
+            GL.GetProgrami(Pointer, ProgramProperty.LinkStatus, out Int32 Result);
             CompileError = (Result == 0);
             GL.GetProgramInfoLog(Pointer, out String Log);
             CompileLog = Log;
 
-            GL.GetProgram(Pointer, GetProgramParameterName.ActiveUniforms, out Int32 NumberOfUniforms);
-            for (Int32 Index = 0; Index <= NumberOfUniforms - 1; Index++) {
-                String Key = GL.GetActiveUniform(Pointer, Index, out _, out _);
+            GL.GetProgrami(Pointer, ProgramProperty.ActiveUniforms, out Int32 NumberOfUniforms);
+            for (UInt32 Index = 0; Index <= NumberOfUniforms - 1; Index++) {
+                String Key = GL.GetActiveUniform(Pointer, Index, Int32.MaxValue, out _, out _, out _);
                 if (String.IsNullOrEmpty(Key)) {
                     continue;
                 }
@@ -85,7 +85,7 @@ public partial class GLProgram : IGLObject {
                 throw new ArgumentException("'UniformName' must not be null!");
             }
 
-            GL.UniformMatrix4(UniformLocations[UniformName], false, ref Value);
+            GL.UniformMatrix4f(UniformLocations[UniformName], 1, false, ref Value);
         }
     }
 
@@ -95,7 +95,7 @@ public partial class GLProgram : IGLObject {
                 throw new ArgumentException("'UniformName' must not be null!");
             }
 
-            GL.UniformMatrix3(UniformLocations[UniformName], false, ref Value);
+            GL.UniformMatrix3f(UniformLocations[UniformName], 1, false, ref Value);
         }
     }
 
@@ -105,7 +105,7 @@ public partial class GLProgram : IGLObject {
                 throw new ArgumentException("'UniformName' must not be null!");
             }
 
-            GL.UniformMatrix2(UniformLocations[UniformName], false, ref Value);
+            GL.UniformMatrix2f(UniformLocations[UniformName], 1, false, ref Value);
         }
     }
 
@@ -115,7 +115,7 @@ public partial class GLProgram : IGLObject {
                 throw new ArgumentException("'UniformName' must not be null!");
             }
 
-            GL.Uniform4(UniformLocations[UniformName], Value);
+            GL.Uniform4f(UniformLocations[UniformName], 1, in Value);
         }
     }
 
@@ -125,7 +125,7 @@ public partial class GLProgram : IGLObject {
                 throw new ArgumentException("'UniformName' must not be null!");
             }
 
-            GL.Uniform3(UniformLocations[UniformName], Value);
+            GL.Uniform3f(UniformLocations[UniformName], 1, in Value);
         }
     }
 
@@ -135,7 +135,7 @@ public partial class GLProgram : IGLObject {
                 throw new ArgumentException("'UniformName' must not be null!");
             }
 
-            GL.Uniform2(UniformLocations[UniformName], Value);
+            GL.Uniform2f(UniformLocations[UniformName], 1, in Value);
         }
     }
 
@@ -145,7 +145,7 @@ public partial class GLProgram : IGLObject {
                 throw new ArgumentException("'UniformName' must not be null!");
             }
 
-            GL.Uniform1(UniformLocations[UniformName], Value);
+            GL.Uniform1f(UniformLocations[UniformName], Value);
         }
     }
 
@@ -155,7 +155,7 @@ public partial class GLProgram : IGLObject {
                 throw new ArgumentException("'UniformName' must not be null!");
             }
 
-            GL.Uniform4(UniformLocations[UniformName], Value);
+            GL.Uniform4i(UniformLocations[UniformName], 1, in Value);
         }
     }
 
@@ -165,7 +165,7 @@ public partial class GLProgram : IGLObject {
                 throw new ArgumentException("'UniformName' must not be null!");
             }
 
-            GL.Uniform3(UniformLocations[UniformName], Value);
+            GL.Uniform3i(UniformLocations[UniformName], 1, in Value);
         }
     }
 
@@ -175,7 +175,7 @@ public partial class GLProgram : IGLObject {
                 throw new ArgumentException("'UniformName' must not be null!");
             }
 
-            GL.Uniform2(UniformLocations[UniformName], Value);
+            GL.Uniform2i(UniformLocations[UniformName], 1, in Value);
         }
     }
 
@@ -185,7 +185,7 @@ public partial class GLProgram : IGLObject {
                 throw new ArgumentException("'UniformName' must not be null!");
             }
 
-            GL.Uniform1(UniformLocations[UniformName], Value);
+            GL.Uniform1i(UniformLocations[UniformName], Value);
         }
     }
 
@@ -195,7 +195,7 @@ public partial class GLProgram : IGLObject {
                 throw new ArgumentException("'UniformName' must not be null!");
             }
 
-            GL.Uniform1(UniformLocations[UniformName], Value);
+            GL.Uniform1ui(UniformLocations[UniformName], Value);
         }
     }
 

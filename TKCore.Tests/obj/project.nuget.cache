@@ -1,25 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "St4udchr4Pg=",
+  "dgSpecHash": "+gBWiQDyELo=",
   "success": true,
   "projectFilePath": "/home/prydaran/Documents/Rider/TKCore/0003/TKCore/TKCore.Tests/TKCore.Tests.vbproj",
   "expectedPackageFiles": [
-    "/home/prydaran/.nuget/packages/opentk/4.8.2/opentk.4.8.2.nupkg.sha512",
-    "/home/prydaran/.nuget/packages/opentk.audio.openal/4.8.2/opentk.audio.openal.4.8.2.nupkg.sha512",
-    "/home/prydaran/.nuget/packages/opentk.compute/4.8.2/opentk.compute.4.8.2.nupkg.sha512",
-    "/home/prydaran/.nuget/packages/opentk.core/4.8.2/opentk.core.4.8.2.nupkg.sha512",
-    "/home/prydaran/.nuget/packages/opentk.graphics/4.8.2/opentk.graphics.4.8.2.nupkg.sha512",
-    "/home/prydaran/.nuget/packages/opentk.input/4.8.2/opentk.input.4.8.2.nupkg.sha512",
-    "/home/prydaran/.nuget/packages/opentk.mathematics/4.8.2/opentk.mathematics.4.8.2.nupkg.sha512",
+    "/home/prydaran/.nuget/packages/opentk/5.0.0-pre.12/opentk.5.0.0-pre.12.nupkg.sha512",
+    "/home/prydaran/.nuget/packages/opentk.audio.openal/5.0.0-pre.12/opentk.audio.openal.5.0.0-pre.12.nupkg.sha512",
+    "/home/prydaran/.nuget/packages/opentk.compute/5.0.0-pre.12/opentk.compute.5.0.0-pre.12.nupkg.sha512",
+    "/home/prydaran/.nuget/packages/opentk.core/5.0.0-pre.12/opentk.core.5.0.0-pre.12.nupkg.sha512",
+    "/home/prydaran/.nuget/packages/opentk.graphics/5.0.0-pre.12/opentk.graphics.5.0.0-pre.12.nupkg.sha512",
+    "/home/prydaran/.nuget/packages/opentk.input/5.0.0-pre.12/opentk.input.5.0.0-pre.12.nupkg.sha512",
+    "/home/prydaran/.nuget/packages/opentk.mathematics/5.0.0-pre.12/opentk.mathematics.5.0.0-pre.12.nupkg.sha512",
+    "/home/prydaran/.nuget/packages/opentk.platform/5.0.0-pre.12/opentk.platform.5.0.0-pre.12.nupkg.sha512",
     "/home/prydaran/.nuget/packages/opentk.redist.glfw/3.3.8.39/opentk.redist.glfw.3.3.8.39.nupkg.sha512",
-    "/home/prydaran/.nuget/packages/opentk.windowing.common/4.8.2/opentk.windowing.common.4.8.2.nupkg.sha512",
-    "/home/prydaran/.nuget/packages/opentk.windowing.desktop/4.8.2/opentk.windowing.desktop.4.8.2.nupkg.sha512",
-    "/home/prydaran/.nuget/packages/opentk.windowing.graphicslibraryframework/4.8.2/opentk.windowing.graphicslibraryframework.4.8.2.nupkg.sha512",
+    "/home/prydaran/.nuget/packages/opentk.windowing.common/5.0.0-pre.12/opentk.windowing.common.5.0.0-pre.12.nupkg.sha512",
+    "/home/prydaran/.nuget/packages/opentk.windowing.desktop/5.0.0-pre.12/opentk.windowing.desktop.5.0.0-pre.12.nupkg.sha512",
+    "/home/prydaran/.nuget/packages/opentk.windowing.graphicslibraryframework/5.0.0-pre.12/opentk.windowing.graphicslibraryframework.5.0.0-pre.12.nupkg.sha512",
     "/home/prydaran/.nuget/packages/stbimagesharp/2.30.15/stbimagesharp.2.30.15.nupkg.sha512",
-    "/home/prydaran/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
-    "/home/prydaran/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
-    "/home/prydaran/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
-    "/home/prydaran/.nuget/packages/microsoft.netcore.app.host.linux-x64/7.0.20/microsoft.netcore.app.host.linux-x64.7.0.20.nupkg.sha512"
+    "/home/prydaran/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -9,7 +9,7 @@ Public Class TextureLoader
         StbImage.stbi_set_flip_vertically_on_load(1)
         Dim Image As ImageResult = ImageResult.FromMemory(IO.File.ReadAllBytes(Path), ColorComponents.RedGreenBlueAlpha)
         Dim Filter As New GLTextureFilter(TextureMinFilter.Nearest, TextureMagFilter.Nearest, TextureWrapMode.ClampToEdge, TextureWrapMode.ClampToEdge)
-        Dim Info As New GLTextureInfo(TextureTarget.Texture2D, PixelInternalFormat.Rgba, PixelFormat.Rgba, PixelType.UnsignedByte, True)
+        Dim Info As New GLTextureInfo(TextureTarget.Texture2D, InternalFormat.Rgba, PixelFormat.Rgba, PixelType.UnsignedByte, True)
         Dim Texture As New GLTexture(Image.Data, TextureUnit.Texture0, New Vector2i(Image.Width, Image.Height), Info, Filter)
         Return Texture
     End Function
