@@ -1,10 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <RootNamespace></RootNamespace>
         <TargetFramework>net7.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>disable</Nullable>
-        <RootNamespace />
+        <LangVersion>16.9</LangVersion>
+        <OptionStrict>On</OptionStrict>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -22,14 +23,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Source\TKCore\Extra\" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <PackageReference Include="OpenTK" Version="4.8.2" />
-    </ItemGroup>
-
-    <ItemGroup>
+      <ProjectReference Include="..\TKCore.Extra\TKCore.Extra.csproj" />
       <ProjectReference Include="..\TKCore\TKCore.csproj" />
     </ItemGroup>
 
